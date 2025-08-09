@@ -22,10 +22,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps: 
-      - name: Download artifact
+      - name: Download text file
         uses: actions/download-artifact@v5
         with:
           name: hello-artifact
-          path: ./artifacts-test
+          path: ./artifacts
       - name: Read file
-        run: cat ./artifacts-test/hello.txt
+        run: cat ./artifacts/hello.txt
